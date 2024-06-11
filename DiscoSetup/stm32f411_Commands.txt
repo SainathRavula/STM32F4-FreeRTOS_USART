@@ -1,0 +1,15 @@
+-->Connecting
+sudo st-info --probe
+sudo st-info --probe --connect-under-reset
+
+-->Flashing
+st-flash write binary/FreeRTOS.bin 0x8000000
+st-flash reset
+st-flash erase
+
+-->Debugging
+st-util
+arm-none-eabi-gdb binary/FreeRTOS.elf -->execute in new terminal window
+tar ext :4242
+sudo lsof -i: 4242 --> gives pid of st-util
+kill "pid"

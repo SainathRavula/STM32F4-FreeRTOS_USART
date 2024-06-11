@@ -1,0 +1,35 @@
+<<<section-1>>> [ps:Solved-> just removed and installed cmake,libusb and built the folder using make multiple times]
+
+->when borad connected , board is not recognized by stlink utility which is downloaded from "https://github.com/stlink-org/stlink/releases"
+
+vlab@HYVLAB1:~/stlink-1.8.0/build/Release$ ./bin/st-info --probe
+/usr/local/share/stlink/chips: No such file or directory
+2024-03-20T11:40:42 ERROR usb.c: Could not open USB device 0x0483:0x3748, access error.
+Found 0 stlink programmers
+vlab@HYVLAB1:~/stlink-1.8.0/build/Release$ 
+
+*but when intalled stlink-tools from terminal, "sudo apt install stlink-tools"
+board is being recognized but ,unable to identify the baord---(green board + anycable cable)
+
+vlab@HYVLAB1:~$ st-info --probe
+Found 1 stlink programmers
+ serial: 543f6e067871575145350767
+openocd: "\x54\x3f\x6e\x06\x78\x71\x57\x51\x45\x35\x07\x67"
+  flash: 0 (pagesize: 0)
+   sram: 0
+ chipid: 0x0000
+  descr: unknown device
+=====================================================================
+->blue board + short cable--Success
+vlab@HYVLAB1:~$ st-info --probe
+Found 1 stlink programmers
+ serial: 343f6a06304d583455350443
+openocd: "\x34\x3f\x6a\x06\x30\x4d\x58\x34\x55\x35\x04\x43"
+  flash: 524288 (pagesize: 16384)
+   sram: 131072
+ chipid: 0x0431
+  descr: F4 device (low power) - stm32f411re
+vlab@HYVLAB1:~$ 
+======================================================================
+
+<<<section-2>>>

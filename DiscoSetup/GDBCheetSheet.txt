@@ -1,0 +1,69 @@
+1)b (break):
+Set breakpoints at specific lines or functions in your code.
+
+2)c (continue): 
+Continue running the program until the next breakpoint is encountered.
+
+3)s (step):
+Execute the next line of the program, stepping into function calls.
+
+4)n (next):
+Execute the next line of the program, stepping over function calls.
+
+5)p variable_name(print): 
+Print the value of a variable.
+
+6)info locals:
+Show local variables in the current stack frame.-
+
+7)info breakpoints:
+List all defined breakpoints.
+
+8)bt (backtrace):
+Print a backtrace of the entire stack.
+
+9)r (run):
+Start the program being debugged.
+
+10)watch variable_name :
+Set a watchpoint on a variable to stop execution whenever its value changes.
+
+11)display expression:
+Add an expression to be automatically displayed each time the program stops.
+
+12)finish: 
+Continue execution until the current function is finished.
+
+13)set variable_name = value:
+Change the value of a variable.
+
+14)info functions: 
+List all defined functions in the program.
+
+15)info registers: 
+Display the contents of CPU registers.
+
+16)set args arg1 arg2:
+Set command-line arguments to be passed to the program when it is started.
+
+17)delete 1:
+Delete breakpoints or watchpoints.
+
+18)run arg1 arg2 :
+Restart the program with new command-line arguments.
+
+19)list: 
+List the source code around the current line or specified location.
+
+20)set breakpoint condition: Set a condition for a breakpoint to be triggered.
+break 10 if variable == value
+
+21)stepi: Step one instruction (assembly level).
+
+22)info sharedlibrary: Show information about loaded shared libraries.
+
+23)finish (number): Finish executing until the specified frame number.
+(gdb) finish 2
+
+24)start: Start the program and stop at the beginning of the main function.
+
