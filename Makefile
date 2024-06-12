@@ -14,8 +14,8 @@ DBG:=-g
 SRCROOT 	 = $(CURDIR)
 
 FREERTOS	:= $(SRCROOT)/FreeRTOS
-STARTUP	:= $(SRCROOT)/hardware
-LINKER_SCRIPT	:= $(SRCROOT)/Utilities/STM32F411VETx_FLASH.ld
+STARTUP	:= $(SRCROOT)/startup
+LINKER_SCRIPT	:= $(SRCROOT)/Linker/STM32F411VETx_FLASH.ld
 
 INCLUDE	+= -I$(SRCROOT)/hardware
 INCLUDE	+= -I$(FREERTOS)/include
@@ -32,6 +32,7 @@ BIN_DIR 	 = $(SRCROOT)/binary
 vpath  %.c $(SRCROOT)/Libraries/STM32F4xx_StdPeriph_Driver/src
 vpath  %.c $(SRCROOT)/Libraries/syscall
 vpath  %.c $(SRCROOT)/hardware
+vpath  %.c $(SRCROOT)/startup
 vpath  %.c $(FREERTOS)
 vpath  %.c $(FREERTOS)/portable/MemMang
 vpath  %.c $(FREERTOS)/portable/GCC/ARM_CM4F
@@ -104,9 +105,9 @@ CDEFS		 = -DUSE_STDPERIPH_DRIVER
 CDEFS		+= -DSTM32F4XX
 CDEFS		+= -DSTM32F40_41xxx
 CDEFS		+= -DHSE_VALUE=8000000
-CDEFS		+= -D__FPU_PRESENT=1
-CDEFS		+= -D__FPU_USED=1
-CDEFS		+= -DARM_MATH_CM4
+#CDEFS		+= -D__FPU_PRESENT=1
+#CDEFS		+= -D__FPU_USED=1
+#CDEFS		+= -DARM_MATH_CM4
 
 MCUFLAGS 	+= -mcpu=cortex-m4
 #Specifies the target processor architecture as ARM Cortex-M4
@@ -189,6 +190,9 @@ $(BUILD_DIR)/%.o: %.c
 	@echo [CC] $(notdir $<)
 	@$(CC) $(CFLAGS) $< -c -o $@
 
+
+.PHONY: all
+
 all: $(OBJ)
 	@echo [AS] $(ASRC)
 	@$(AS) -o $(ASM_OBJ) $(STARTUP)/$(ASRC)
@@ -215,6 +219,8 @@ clean:
 	@rm -f $(BIN_DIR)/$(TARGET).elf
 	@rm -f $(BIN_DIR)/$(TARGET).hex
 	@rm -f $(BIN_DIR)/$(TARGET).bin
+	
+.PHONY: flash
 
 flash:
 	@st-flash write $(BIN_DIR)/$(TARGET).bin 0x8000000
