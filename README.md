@@ -1,24 +1,22 @@
 This repository contains demo project of porting FreeRtos to STM32F4 by linux using Makefile.(STM32F411E).
+
 Implementation of USART peripheral to print data on GTKTerm serial monitor.
+
 -->Refering these link
 
 https://github.com/wangyeee/STM32F4-FreeRTOS
 
-blue board-->stm32f411e (MB1115D)
-
-green board-->stm32f411e (Mb1115B)
-
-Setting up the Work Bench 
-=========================
-
--->Refering these link
-https://github.com/wangyeee/STM32F4-FreeRTOS
 https://github.com/stlink-org/stlink/releases
+
 https://github.com/espruino/Espruino/tree/master/targetlibs/stm32f4/lib
 
 blue board-->stm32f411e (MB1115D)
 
 green board-->stm32f411e (Mb1115B)
+
+** Setting up the Work Bench ** 
+=============================
+
 
 Toolchain for arm processors
 ============================
@@ -375,23 +373,40 @@ Observing output
 To observe the print statements written in code, we will use GTKTerm serial window
 
 -We cannot use printf in main file, we have send data using USART function USART_SendData
+
 -Install GTKTerm directly from terminal "sudo apt install gtkterm"
+
 -open the GTKTerm application and set the configurations
+
 	-Select port as /dev/ttyUSB0.
+ 
 	-Baud rate is usually 9600 or 115200 but in this case it is working with 1200 and 600.
+ 
 	-Parity as none.
+ 
 	-Bits as 8.
+ 
 	-StopBits as 1.
+ 
 	-Flow Control as none.
+ 
 -In terminal we need to give permission for ttyUSB0 "sudo chmod 777 /dev/ttyUSB0"
+
 -RS232 cable will have 6 wires.
+
 	-Yellow -> RX
+ 
 	-Orange -> TX
+ 
 	-Black -> gnd
+ 
 	-Red -> 3.3v
+ 
 	-Brown -> CTS#
+ 
 	-RTS -> RTS#
 -Connect Rx of RS232 cable to Tx pin on board and viceversa.
+
 -We are using USART1 so PA9->Tx and PA10->Rx.
 
 	
