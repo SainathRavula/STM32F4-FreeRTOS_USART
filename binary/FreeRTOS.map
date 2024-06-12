@@ -60,7 +60,7 @@ Discarded input sections
  .text._open    0x0000000000000000        0x8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text._read    0x0000000000000000       0x10 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text._lseek   0x0000000000000000        0x4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .text._write   0x0000000000000000       0x34 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .text._write   0x0000000000000000        0x4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text._close   0x0000000000000000        0x4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text._sbrk    0x0000000000000000       0x38 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text._fstat   0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
@@ -69,16 +69,16 @@ Discarded input sections
  .text._getpid  0x0000000000000000        0x4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .bss.heap_end.0
                 0x0000000000000000        0x4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_info    0x0000000000000000      0x6c9 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_abbrev  0x0000000000000000      0x1ec /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_loc     0x0000000000000000      0x2f8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_info    0x0000000000000000      0x589 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_abbrev  0x0000000000000000      0x192 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_loc     0x0000000000000000      0x24f /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .debug_aranges
                 0x0000000000000000       0x68 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .debug_ranges  0x0000000000000000       0x58 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_line    0x0000000000000000      0x427 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_str     0x0000000000000000      0x44d /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_line    0x0000000000000000      0x2c4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_str     0x0000000000000000      0x3c2 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .comment       0x0000000000000000       0x4a /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
- .debug_frame   0x0000000000000000       0xe8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
+ .debug_frame   0x0000000000000000       0xd0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .ARM.attributes
                 0x0000000000000000       0x34 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/syscalls.o
  .text          0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/port.o
@@ -1294,47 +1294,47 @@ LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc
  .debug_ranges  0x00000000000014c0       0x30 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/misc.o
  .debug_ranges  0x00000000000014f0       0xf0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_usart.o
 
-.debug_line     0x0000000000000000     0xaeb1
+.debug_line     0x0000000000000000     0xaeb0
  .debug_line    0x0000000000000000      0x1fa /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_it.o
- .debug_line    0x00000000000001fa      0x2f1 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/system_stm32f4xx.o
- .debug_line    0x00000000000004eb      0x542 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/main.o
- .debug_line    0x0000000000000a2d      0x7a5 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/port.o
- .debug_line    0x00000000000011d2      0x384 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/list.o
- .debug_line    0x0000000000001556     0x2968 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/queue.o
- .debug_line    0x0000000000003ebe     0x377a /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/tasks.o
- .debug_line    0x0000000000007638      0xfcc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/timers.o
- .debug_line    0x0000000000008604      0x708 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/heap_4.o
- .debug_line    0x0000000000008d0c      0xdcf /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_rcc.o
- .debug_line    0x0000000000009adb      0x649 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_gpio.o
- .debug_line    0x000000000000a124      0x3ac /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/misc.o
- .debug_line    0x000000000000a4d0      0x9e1 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_usart.o
+ .debug_line    0x00000000000001fa      0x2f0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/system_stm32f4xx.o
+ .debug_line    0x00000000000004ea      0x542 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/main.o
+ .debug_line    0x0000000000000a2c      0x7a5 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/port.o
+ .debug_line    0x00000000000011d1      0x384 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/list.o
+ .debug_line    0x0000000000001555     0x2968 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/queue.o
+ .debug_line    0x0000000000003ebd     0x377a /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/tasks.o
+ .debug_line    0x0000000000007637      0xfcc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/timers.o
+ .debug_line    0x0000000000008603      0x708 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/heap_4.o
+ .debug_line    0x0000000000008d0b      0xdcf /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_rcc.o
+ .debug_line    0x0000000000009ada      0x649 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_gpio.o
+ .debug_line    0x000000000000a123      0x3ac /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/misc.o
+ .debug_line    0x000000000000a4cf      0x9e1 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_usart.o
 
-.debug_str      0x0000000000000000     0x3593
+.debug_str      0x0000000000000000     0x3592
  .debug_str     0x0000000000000000      0x22f /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_it.o
                                         0x26c (size before relaxing)
- .debug_str     0x000000000000022f      0x231 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/system_stm32f4xx.o
-                                        0x3cc (size before relaxing)
- .debug_str     0x0000000000000460      0x58c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/main.o
+ .debug_str     0x000000000000022f      0x230 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/system_stm32f4xx.o
+                                        0x3cb (size before relaxing)
+ .debug_str     0x000000000000045f      0x58c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/main.o
                                         0x791 (size before relaxing)
- .debug_str     0x00000000000009ec      0x294 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/port.o
+ .debug_str     0x00000000000009eb      0x294 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/port.o
                                         0x476 (size before relaxing)
- .debug_str     0x0000000000000c80      0x158 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/list.o
+ .debug_str     0x0000000000000c7f      0x158 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/list.o
                                         0x315 (size before relaxing)
- .debug_str     0x0000000000000dd8      0x841 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/queue.o
+ .debug_str     0x0000000000000dd7      0x841 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/queue.o
                                         0xb93 (size before relaxing)
- .debug_str     0x0000000000001619      0xab4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/tasks.o
+ .debug_str     0x0000000000001618      0xab4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/tasks.o
                                        0x1240 (size before relaxing)
- .debug_str     0x00000000000020cd      0x4c7 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/timers.o
+ .debug_str     0x00000000000020cc      0x4c7 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/timers.o
                                         0xb28 (size before relaxing)
- .debug_str     0x0000000000002594      0x1f7 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/heap_4.o
+ .debug_str     0x0000000000002593      0x1f7 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/heap_4.o
                                         0x41b (size before relaxing)
- .debug_str     0x000000000000278b      0x6e3 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_rcc.o
+ .debug_str     0x000000000000278a      0x6e3 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_rcc.o
                                         0xa37 (size before relaxing)
- .debug_str     0x0000000000002e6e      0x1a9 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_gpio.o
+ .debug_str     0x0000000000002e6d      0x1a9 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_gpio.o
                                         0x52c (size before relaxing)
- .debug_str     0x0000000000003017      0x1ea /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/misc.o
+ .debug_str     0x0000000000003016      0x1ea /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/misc.o
                                         0x443 (size before relaxing)
- .debug_str     0x0000000000003201      0x392 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_usart.o
+ .debug_str     0x0000000000003200      0x392 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_USART/build/stm32f4xx_usart.o
                                         0x744 (size before relaxing)
 
 .comment        0x0000000000000000       0x49
