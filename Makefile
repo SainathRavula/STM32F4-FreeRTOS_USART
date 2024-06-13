@@ -30,7 +30,6 @@ BIN_DIR 	 = $(SRCROOT)/binary
 
 
 vpath  %.c $(SRCROOT)/Libraries/STM32F4xx_StdPeriph_Driver/src
-vpath  %.c $(SRCROOT)/Libraries/syscall
 vpath  %.c $(SRCROOT)/hardware
 vpath  %.c $(SRCROOT)/startup
 vpath  %.c $(FREERTOS)
@@ -48,7 +47,6 @@ ASRC		= startup_stm32f4xx.s
 SRC		+= stm32f4xx_it.c
 SRC		+= system_stm32f4xx.c
 SRC		+= main.c
-SRC		+= syscalls.c
 # FreeRTOS Source Files
 SRC		+= port.c
 SRC		+= list.c
@@ -184,9 +182,10 @@ ASM_OBJ	 = $(ASRC:%.s=$(BUILD_DIR)/%.o)
 #$(ASRC:%.s=$(BUILD_DIR)/%.o): This is a pattern substitution This syntax substitutes each filename in the variable $(ASRC) 
 #with a corresponding output filename in the build directory ($(BUILD_DIR)), replacing the .s extension with .o.
 
-
+	
 #$< :- name of dependency; $@ :- name of target 
 $(BUILD_DIR)/%.o: %.c
+	@mkdir -p $(BUILD_DIR)
 	@echo [CC] $(notdir $<)
 	@$(CC) $(CFLAGS) $< -c -o $@
 
@@ -197,7 +196,7 @@ all: $(OBJ)
 	@echo [AS] $(ASRC)
 	@$(AS) -o $(ASM_OBJ) $(STARTUP)/$(ASRC)
 #arm-none-eabi-gcc-as -o startup_stm32f4xx.o startup_stm32f4xx.s 
-	
+	@mkdir -p $(BIN_DIR)
 	@echo [LD] $(TARGET).elf
 	@$(CC) -o $(BIN_DIR)/$(TARGET).elf $(LDFLAGS) $(OBJ) $(ASM_OBJ) $(LDLIBS)
 #arm-none-eabi-gcc -o FreeRTOS.elf file1.o file2.o ....
